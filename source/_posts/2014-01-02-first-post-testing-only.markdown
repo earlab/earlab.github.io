@@ -1,0 +1,72 @@
+---
+layout: post
+title: "First Post. Testing Only"
+date: 2014-01-02 19:00:55 +0200
+comments: true
+categories:
+---
+{% capture lvl %}{{ page.url | append:'s' | split:/ | size }}{% endcapture %}
+{% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
+
+{% capture lvldbg %}{{ page.url | split:'/' | size }}{% endcapture %}
+{% capture relativedbg %}{% for i in (1..lvldbg) %}[level]{% endfor %}{% endcapture %}
+{% capture relativedbg2 %}{% for i in (1..lvldbg) %}../{% endfor %}{% endcapture %}
+{% capture relativedbg3 %}{% for i in (2..lvldbg) %}../{% endfor %}{% endcapture %}
+
+<h2>Actually: The following IS the way to go!</h2>
+
+<p> Using some liquid to create relatie (sic!!!) links:
+<br />debugging:
+<br />The page url is: {{ page.url }}
+<br />Its split size is: {{ lvldbg }}
+<br />When I am done with this, I will output one "hello" for each level of path that I need to go back.
+<br />Bur (siccc !!!) for now I will try to iterate the levels found by splitting to / pure, and brute:
+<br />{{ relativedbg }}
+<br />Now constructing this as a relative path:
+<br />{{ relativedbg2 }}
+<br />Now removing false extra ../'s:
+<br />{{ relativedbg3 }}
+<br />Now using the reduced correct stuff to point to an actual file:
+<br />{{ relativedbg3 }}index.html
+<br />Now all this as a link:
+<br />The link in raw is:
+<br />{{ relativedbg3 }}index.html
+<br /><a href="{{ relativedbg3 }}index.html">Is this my home?</a>
+<strong>Ypippeee!!!!. It works!!!</strong>
+<br />Now trying to point to a css or javascript stuff
+<br />The link in raw is:
+<br />{{ relativedbg3 }}javascripts/github.js
+<br /><a href="{{ relativedbg3 }}javascripts/github.js">Is this javascript?</a>
+<br />Further debugging: adding an extra level down:
+<br /><br /><a href="{{ relativedbg3 }}../javascripts/github.js">Is this javascript?</a>
+<br /><a href="{{ relativedbg3 }}stylesheets/screen.css">Is this css?</a>
+<hr />
+o<br />buggy:
+<br />
+{{ relative }}css/main.css
+<br />
+{{ relative }}scripts/jquery.js
+
+</p>
+<hr />
+<h2>And now, the POOR MAN's solution:</h2>
+<p>Trying to post the root in plain text, from liquid: {{ root_url }}</p>
+<hr>
+
+<p>testing</p>
+<hr />
+
+<p>Testing first steps in Liquid:</p>
+<p>{{ site.time | date_to_rfc822 }}</p>
+
+<p>Page URL: {{ page.url }}</p>
+
+<p>Page Path: {{ page.path }}</p>
+<hr />
+
+<p>trying relative and absolute mustachios</p>
+
+<p>This should work better:</p>
+<p>First trying post.root vs page.root</p>
+<p>post root is: {{ post.root }}</p>
+<p>page root is: {{ page.root }}</p>

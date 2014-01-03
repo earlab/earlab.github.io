@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<p>This is a plain page.</p>
+<p>Trying to post the root in plain text, from liquid: {{ root_url }}</p>
+<hr>
+
+<p>testing</p>
+<hr />
+
+<p>Testing first steps in Liquid:
+
+{% cycle 'group 1': 'one', 'two', 'three' %}
+{% cycle 'group 1': 'one', 'two', 'three' %}
+{% cycle 'group 2': 'one', 'two', 'three' %}
+{% cycle 'group 2': 'one', 'two', 'three' %}
+
+ </p>
+<p>{{ site.time | date_to_rfc822 }}</p>
+
+<p>Page URL: {{ page.url }}</p>
+
+<p>Page Path: {{ page.path }}</p>
