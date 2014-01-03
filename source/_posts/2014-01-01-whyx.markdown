@@ -1,9 +1,0 @@
----
-layout: post
-title: "why asdfasdf ?"
-date: 2014-01-03 18:30:11 +0200
-comments: true
-categories:
----
-
-No, it's ok.
