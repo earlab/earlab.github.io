@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T16:19:01+02:00</updated>
+  <updated>2014-01-04T16:20:45+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -45,6 +45,8 @@ Coding for Art
 <p>and then <code>rake deploy</code></p>
 
 <p>fixed it.</p>
+
+<p>Then re-running the same, after adding the present comments, but not creating new posts, the problem reappeared.</p>
 ]]></content>
   </entry>
   
