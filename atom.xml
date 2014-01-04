@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T21:57:44+02:00</updated>
+  <updated>2014-01-04T22:53:31+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -390,7 +390,7 @@ LHCV : LHC {
     <id>http://earlab.github.io/blog/2014/01/04/installing-site-on-github</id>
     <content type="html"><![CDATA[<p>Installing the site on github was easy, using <a href="http://octopress.org/docs/deploying/github/">the instructions from the octopress site</a>.</p>
 
-<p>The site is now on the [earlab organization page)[<a href="http://earlab.github.io/">http://earlab.github.io/</a>).</p>
+<p>The site is now on the <a href="http://earlab.github.io/">earlab organization page</a>.</p>
 
 <!--more-->
 
@@ -475,9 +475,12 @@ LHCV : LHC {
   <li>PT Sans</li>
   <li>Open Sans</li>
   <li>Lato</li>
+  <li>Questrial</li>
 </ul>
 
 <p>Chose Lato.</p>
+
+<p>Alternative / considering: Questrial (has only regular face, must combine with other font for italic, bold)</p>
 
 <h3>Older selection, many fonts selected in a hurry</h3>
 <pre><code>
