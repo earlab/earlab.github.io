@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T17:24:22+02:00</updated>
+  <updated>2014-01-04T17:26:37+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -66,6 +66,8 @@ Testing again with a simple deploy &ndash; with G.D watching on the other side o
 <p>Jan 4, 2014 (5:22 PM) : Broken formatting.  Retrying: Running <code>rake generate</code>.</p>
 
 <p>Jan 4, 2014 (5:23 PM) : Edit and rerun <code>rake generate</code>.</p>
+
+<p>Jan 4, 2014 (5:25 PM) : (after <code>rake deploy</code>): Page renders correctly locally, but is broken on GitHub.</p>
 ]]></content>
   </entry>
   
