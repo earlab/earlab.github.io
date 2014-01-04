@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T16:05:08+02:00</updated>
+  <updated>2014-01-04T16:15:47+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Wrong Site Name Persists]]></title>
+    <link href="http://earlab.github.io/blog/2014/01/04/wrong-site-name-persists/"/>
+    <updated>2014-01-04T16:12:11+02:00</updated>
+    <id>http://earlab.github.io/blog/2014/01/04/wrong-site-name-persists</id>
+    <content type="html"><![CDATA[<p><a href="http://earlab.github.io/">http://earlab.github.io/</a></p>
+
+<p>Mysterious bugs.  Is it GitHub caching the website, and delaying updates?</p>
+
+<p>The site&rsquo;s title reads:</p>
+
+<pre><code>My Octopress Blog
+A blogging framework for hackers.
+</code></pre>
+
+<p>But the <code>index.html</code> page of the site shows the correct title:</p>
+
+<pre><code>Earlab
+Coding for Art
+</code></pre>
+
+<p>Why the difference?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using Gists]]></title>
