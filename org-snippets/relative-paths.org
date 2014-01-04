@@ -1,0 +1,5 @@
+{% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
+{% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
+
+<link href="{{ relative }}css/main.css" rel="stylesheet" />
+<script src="{{ relative }}scripts/jquery.js"></script>
