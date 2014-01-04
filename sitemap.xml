@@ -1,67 +1,67 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://yoursite.com/blog/2014/01/04/relative-paths/</loc>
+        <loc>http://earlab.github.io/blog/2014/01/04/relative-paths/</loc>
         <lastmod>2014-01-04T14:09:59+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2014/01/04/logo-style-font/</loc>
+        <loc>http://earlab.github.io/blog/2014/01/04/logo-style-font/</loc>
         <lastmod>2014-01-04T14:09:37+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2014/01/04/google-font-selection/</loc>
+        <loc>http://earlab.github.io/blog/2014/01/04/google-font-selection/</loc>
         <lastmod>2014-01-04T14:09:15+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2014/01/04/posting-excerpts/</loc>
+        <loc>http://earlab.github.io/blog/2014/01/04/posting-excerpts/</loc>
         <lastmod>2014-01-04T14:19:19+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2014/01/04/installing-site-on-github/</loc>
+        <loc>http://earlab.github.io/blog/2014/01/04/installing-site-on-github/</loc>
         <lastmod>2014-01-04T15:32:45+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2014/01/04/checking-rake-deploy-on-github/</loc>
+        <loc>http://earlab.github.io/blog/2014/01/04/checking-rake-deploy-on-github/</loc>
         <lastmod>2014-01-04T15:47:38+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2014/01/04/using-gists/</loc>
+        <loc>http://earlab.github.io/blog/2014/01/04/using-gists/</loc>
         <lastmod>2014-01-04T16:02:55+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2014/01/04/wrong-site-name-persists/</loc>
+        <loc>http://earlab.github.io/blog/2014/01/04/wrong-site-name-persists/</loc>
         <lastmod>2014-01-04T16:17:41+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/archives/</loc>
+        <loc>http://earlab.github.io/blog/archives/</loc>
         <lastmod>2014-01-04T16:17:41+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/archives/index2.html</loc>
+        <loc>http://earlab.github.io/blog/archives/index2.html</loc>
         <lastmod>2014-01-03T19:45:31+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/</loc>
+        <loc>http://earlab.github.io/blog/</loc>
         <lastmod>2014-01-04T16:17:41+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/</loc>
+        <loc>http://earlab.github.io/</loc>
         <lastmod>2014-01-04T16:17:41+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/pages.html</loc>
+        <loc>http://earlab.github.io/pages.html</loc>
         <lastmod>2014-01-03T20:49:36+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/robots.txt</loc>
+        <loc>http://earlab.github.io/robots.txt</loc>
         <lastmod>2014-01-03T16:39:20+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/subfolder1/</loc>
+        <loc>http://earlab.github.io/subfolder1/</loc>
         <lastmod>2014-01-04T16:17:41+02:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/subfolder1/subsubfolder1/</loc>
+        <loc>http://earlab.github.io/subfolder1/subsubfolder1/</loc>
         <lastmod>2014-01-04T16:17:41+02:00</lastmod>
     </url>
 </urlset>
