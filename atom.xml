@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T23:17:58+02:00</updated>
+  <updated>2014-01-04T23:21:09+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -156,13 +156,16 @@ Testing again with a simple deploy &ndash; with G.D watching on the other side o
 
 <h3>Better styles for gist includes</h3>
 
-<p>/<em> Better styles for embedding GitHub Gists </em>/
-/<em> From: <a href="https://gist.github.com/jnrbsn/578379">https://gist.github.com/jnrbsn/578379</a> </em>/
+<p>From: <a href="https://gist.github.com/jnrbsn/578379">https://gist.github.com/jnrbsn/578379</a></p>
+
+<pre><code>/* Better styles for embedding GitHub Gists */
+/* From: https://gist.github.com/jnrbsn/578379 */
 .gist{font-size:13px;line-height:18px;margin-bottom:20px;width:100%}
-.gist pre{font-family:Menlo,Monaco,&lsquo;Bitstream Vera Sans Mono&rsquo;,&lsquo;Courier New&rsquo;,monospace !important}
+.gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}
 .gist-meta{font-family:Helvetica,Arial,sans-serif;font-size:13px !important}
 .gist-meta a{color:#26a !important;text-decoration:none}
-.gist-meta a:hover{color:#0e4071 !important}</p>
+.gist-meta a:hover{color:#0e4071 !important}
+</code></pre>
 
 <h3>Test</h3>
 
