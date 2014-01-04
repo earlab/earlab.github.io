@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T19:00:39+02:00</updated>
+  <updated>2014-01-04T21:33:07+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Categories]]></title>
+    <link href="http://earlab.github.io/blog/2014/01/04/categories/"/>
+    <updated>2014-01-04T19:05:17+02:00</updated>
+    <id>http://earlab.github.io/blog/2014/01/04/categories</id>
+    <content type="html"><![CDATA[<p>Next, use categories (= keywords, tags) to group posts into topics, in octopress.</p>
+
+<p>Categories should be listed in the header of a page.  <code>rake new_post['page name']</code> creates a heading in the poster for doing this.  To input more than one category, or a category consisting of more than one word, use one of the formats explained in following example from <a href="http://octopress.org/docs/blogging/">http://octopress.org/docs/blogging/</a> :</p>
+
+<!--more-->
+
+
+<pre><code> # One category
+ categories: Sass
+
+ # Multiple categories example 1
+ categories: [CSS3, Sass, Media Queries]
+
+ # Multiple categories example 2
+ categories:
+ - CSS3
+ - Sass
+ - Media Queries
+</code></pre>
+
+<h3>Listing Categories: Plugins</h3>
+
+<p>Category tree:
+<a href="https://github.com/matthiasbeyer/jekyll_category_tree">https://github.com/matthiasbeyer/jekyll_category_tree</a></p>
+
+<p>Category list + Tag cloud:
+<a href="https://github.com/tokkonopapa/octopress-tagcloud">https://github.com/tokkonopapa/octopress-tagcloud</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Take Care to Run Rake Generate]]></title>
@@ -417,7 +452,9 @@ LHCV : LHC {
     <link href="http://earlab.github.io/blog/2014/01/04/google-font-selection/"/>
     <updated>2014-01-04T03:46:46+02:00</updated>
     <id>http://earlab.github.io/blog/2014/01/04/google-font-selection</id>
-    <content type="html"><![CDATA[<p>Selection of open fonts from google</p>
+    <content type="html"><![CDATA[<p>Update Jan 4, 2014 (7:46 PM): Consider Open Sans 400, 300, 700.  See default font of Ghost </p>
+
+<p>Selection of open fonts from google</p>
 <!--more-->
 <p>See: http://www.google.com/fonts</p>
 

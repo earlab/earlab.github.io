@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Google Font Selection - Earlab</title>
+  <title>Categories - Earlab</title>
   <meta name="author" content="Ioannis Zannos">
 
   
-  <meta name="description" content="Update Jan 4, 2014 (7:46 PM): Consider Open Sans 400, 300, 700. See default font of Ghost Selection of open fonts from google See: http://www.google. &hellip;">
+  <meta name="description" content="Next, use categories (= keywords, tags) to group posts into topics, in octopress. Categories should be listed in the header of a page. rake new_post &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://earlab.github.io/blog/2014/01/04/google-font-selection">
+  <link rel="canonical" href="http://earlab.github.io/blog/2014/01/04/categories">
   <link href="/favicon.png" rel="icon">
   <script src="/javascripts/typekit.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
@@ -71,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">Google Font Selection</h1>
+      <h1 class="entry-title">Categories</h1>
     
     
       <p class="meta">
@@ -87,67 +87,40 @@
   
 
 
-<time datetime="2014-01-04T03:46:46+02:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
+<time datetime="2014-01-04T19:05:17+02:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Update Jan 4, 2014 (7:46 PM): Consider Open Sans 400, 300, 700.  See default font of Ghost </p>
+<div class="entry-content"><p>Next, use categories (= keywords, tags) to group posts into topics, in octopress.</p>
 
-<p>Selection of open fonts from google</p>
+<p>Categories should be listed in the header of a page.  <code>rake new_post['page name']</code> creates a heading in the poster for doing this.  To input more than one category, or a category consisting of more than one word, use one of the formats explained in following example from <a href="http://octopress.org/docs/blogging/">http://octopress.org/docs/blogging/</a> :</p>
+
 <!--more-->
-<p>See: http://www.google.com/fonts</p>
 
-<p>See http://melandri.net/2012/02/14/octopress-theme-customization/ about how to use them in octopress, and a nice choice of non-serif (Lato, &#8230;).</p>
 
-<h3>Considerations after Sacha Greif</h3>
+<pre><code> # One category
+ categories: Sass
 
-<a href="http://sachagreif.com/google-webfonts-that-dont-suck/">Sacha Greif on google webfonts that don&#8217;t suck</a>
-<br>
-<a href="http://sachagreif.com/more-google-webfonts-that-dont-suck/">Follow up to previous post by Sacha Greif</a>
+ # Multiple categories example 1
+ categories: [CSS3, Sass, Media Queries]
 
-<p>tried out:</p>
-<ul>
-  <li>Ubuntu (Favorite of Sacha Greif)</li>
-  <li>Cabin</li>
-  <li>Imprima</li>
-  <li>Varela</li>
-  <li>PT Sans</li>
-  <li>Open Sans</li>
-  <li>Lato</li>
-</ul>
-
-<p>Chose Lato.</p>
-
-<h3>Older selection, many fonts selected in a hurry</h3>
-<pre><code>
-&lt;link href='http://fonts.googleapis.com/css?family=Rambla:400, 700, 400italic, 700italic |
-Source+Sans+Pro:200, 300, 400, 600, 700, 900, 200italic, 300italic, 400italic, 600italic,
-00italic, 900italic | Overlock | Noto+Sans | Lato | Cabin | BenchNine | PT+Sans |
-abin+Condensed | Arimo | Quicksand | Carrois+Gothic | Asap | Cantarell | Muli |
-legreya+Sans | Imprima | Telex | Rosario | Pathway+Gothic+One | Chivo |
-uattrocento+Sans | Raleway+Dots | Alef | Open+Sans | Open+Sans+Condensed:300 |
-unito | Oxygen | Archivo+Narrow&amp;subset=latin, latin-ext, greek-ext, greek'
-el='stylesheet' type='text/css'&gt;
+ # Multiple categories example 2
+ categories:
+ - CSS3
+ - Sass
+ - Media Queries
 </code></pre>
 
-<p>Usage examples from google: http://www.google.com/fonts#UsePlace:use</p>
+<h3>Listing Categories: Plugins</h3>
 
-<pre>
-font-family: 'Rambla', sans-serif;
-font-family: 'Source Sans Pro', sans-serif;
-font-family: 'Overlock', cursive;
-font-family: 'Noto Sans', sans-serif;
-font-family: 'Lato', sans-serif;
-font-family: 'Cabin', sans-serif;
-font-family: 'BenchNine', sans-serif;
-font-family: 'PT Sans', sans-serif;
-font-family: 'Cabin Condensed', sans-serif;
-font-family: 'Arimo', sans-serif;
-font-family: 'Quicksand', sans-serif;
-</pre>
+<p>Category tree:
+<a href="https://github.com/matthiasbeyer/jekyll_category_tree">https://github.com/matthiasbeyer/jekyll_category_tree</a></p>
+
+<p>Category list + Tag cloud:
+<a href="https://github.com/tokkonopapa/octopress-tagcloud">https://github.com/tokkonopapa/octopress-tagcloud</a></p>
 </div>
 
 
@@ -170,7 +143,7 @@ font-family: 'Quicksand', sans-serif;
   
 
 
-<time datetime="2014-01-04T03:46:46+02:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
+<time datetime="2014-01-04T19:05:17+02:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
       
 
 
@@ -178,7 +151,7 @@ font-family: 'Quicksand', sans-serif;
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://earlab.github.io/blog/2014/01/04/google-font-selection/" data-via="" data-counturl="http://earlab.github.io/blog/2014/01/04/google-font-selection/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://earlab.github.io/blog/2014/01/04/categories/" data-via="" data-counturl="http://earlab.github.io/blog/2014/01/04/categories/" >Tweet</a>
   
   
   
@@ -187,10 +160,8 @@ font-family: 'Quicksand', sans-serif;
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/01/04/logo-style-font/" title="Previous Post: logo style font">&laquo; logo style font</a>
+        <a class="basic-alignment left" href="/blog/2014/01/04/wrong-site-name-persists/" title="Previous Post: Take care to run rake generate">&laquo; Take care to run rake generate</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/01/04/posting-excerpts/" title="Next Post: Posting Excerpts">Posting Excerpts &raquo;</a>
       
     </p>
   </footer>
