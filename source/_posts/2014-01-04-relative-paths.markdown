@@ -7,7 +7,7 @@ categories:
 ---
 
 From: [stackoverflow](http://stackoverflow.com/questions/7985081/how-to-deploy-a-jekyll-site-locally-with-css-js-and-background-images-included).
-
+<!--more-->
 Use liquid:
 
     {% raw %}
