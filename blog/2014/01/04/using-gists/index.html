@@ -5,14 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Using Gists - Earlab</title>
+  <title>Including Gists and Other Code - Earlab</title>
   <meta name="author" content="Ioannis Zannos">
 
   
-  <meta name="description" content="Embedding gists in the octopress blog. Here is a test. /*
-// synth definition already written in SynthDef.synthDefDir
-(
-SynthDef(\LHCV, { | out=0, &hellip;">
+  <meta name="description" content="Embedding code, by pasting, including files, including gists in the octopress blog. Here are some notes about styles and ways of quoting code, and a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,7 +73,7 @@ SynthDef(\LHCV, { | out=0, &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Using Gists</h1>
+      <h1 class="entry-title">Including Gists and Other Code</h1>
     
     
       <p class="meta">
@@ -99,12 +96,41 @@ SynthDef(\LHCV, { | out=0, &hellip;">
   </header>
 
 
-<div class="entry-content"><p>Embedding gists in the octopress blog. Here is a test.</p>
+<div class="entry-content"><p>Embedding code, by pasting, including files, including gists in the octopress blog.  Here are some notes about styles and ways of quoting code, and a test.</p>
 
 <!--more-->
 
 
+<h3>Ways for including code</h3>
 
+<h4>Backticks `</h4>
+
+<p><a href="http://octopress.org/docs/plugins/backtick-codeblock/">http://octopress.org/docs/plugins/backtick-codeblock/</a></p>
+
+<pre><code>``` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
+    code snippet
+```
+</code></pre>
+
+<h4>Include Code</h4>
+
+<p><a href="http://octopress.org/docs/plugins/include-code/">http://octopress.org/docs/plugins/include-code/</a></p>
+
+<pre><code>{% include_code [title] [lang:language] path/to/file [start:#] [end:#]
+   [range:#-#] [mark:#,#-#] [linenos:false] %}
+</code></pre>
+
+<h3>Better styles for gist includes</h3>
+
+<p>/<em> Better styles for embedding GitHub Gists </em>/
+/<em> From: <a href="https://gist.github.com/jnrbsn/578379">https://gist.github.com/jnrbsn/578379</a> </em>/
+.gist{font-size:13px;line-height:18px;margin-bottom:20px;width:100%}
+.gist pre{font-family:Menlo,Monaco,&lsquo;Bitstream Vera Sans Mono&rsquo;,&lsquo;Courier New&rsquo;,monospace !important}
+.gist-meta{font-family:Helvetica,Arial,sans-serif;font-size:13px !important}
+.gist-meta a{color:#26a !important;text-decoration:none}
+.gist-meta a:hover{color:#0e4071 !important}</p>
+
+<h3>Test</h3>
 
 <div><script src='https://gist.github.com/8071915.js?file=lhcsc'></script>
 <noscript><pre><code>/*
@@ -403,7 +429,7 @@ LHCV : LHC {
       </li>
     
       <li class="post">
-        <a href="/blog/2014/01/04/using-gists/">Using Gists</a>
+        <a href="/blog/2014/01/04/using-gists/">Including Gists and Other Code</a>
       </li>
     
       <li class="post">
