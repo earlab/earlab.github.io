@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Earlab]]></title>
+  <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2014-01-04T14:21:02+02:00</updated>
+  <updated>2014-01-04T14:58:31+02:00</updated>
   <id>http://yoursite.com/</id>
   <author>
-    <name><![CDATA[Ioannis Zannos]]></name>
+    <name><![CDATA[Your Name]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Installing Site on Github]]></title>
+    <link href="http://yoursite.com/blog/2014/01/04/installing-site-on-github/"/>
+    <updated>2014-01-04T14:51:52+02:00</updated>
+    <id>http://yoursite.com/blog/2014/01/04/installing-site-on-github</id>
+    <content type="html"><![CDATA[<p>Installing the site on github was easy, using <a href="http://octopress.org/docs/deploying/github/">the instructions from the octopress site</a>.</p>
+
+<p>The site is now on the (earlab organization page)[<a href="http://earlab.github.io/">http://earlab.github.io/</a>].</p>
+
+<!--more-->
+
+
+<p>I still need to check what <code>rake deploy</code> does now.  I.e.:</p>
+
+<ul>
+<li>Do I need to run <code>rake generate</code> as before?</li>
+<li>Do I need to commit manually before running <code>rake deploy</code>?</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Posting Excerpts]]></title>
