@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T23:21:09+02:00</updated>
+  <updated>2014-01-04T23:28:26+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -135,7 +135,7 @@ Testing again with a simple deploy &ndash; with G.D watching on the other side o
 <!--more-->
 
 
-<h3>Ways for including code</h3>
+<h3>Ways to include code</h3>
 
 <h4>Backticks `</h4>
 
