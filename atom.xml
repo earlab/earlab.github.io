@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2014-01-04T15:23:21+02:00</updated>
+  <updated>2014-01-04T15:27:07+02:00</updated>
   <id>http://yoursite.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -19,6 +19,16 @@
     <updated>2014-01-04T15:22:06+02:00</updated>
     <id>http://yoursite.com/blog/2014/01/04/checking-rake-deploy-on-github</id>
     <content type="html"><![CDATA[<p>Had to remove the repository and create it again.  Creating the README on github messed things up.</p>
+
+<p>Result: <code>rake deploy</code> updates + publishes the site in one command.</p>
+
+<ol>
+<li>Pull any changes from github.</li>
+<li>Generate site locally.</li>
+<li>Commit new state of site to git.</li>
+<li>Push new state of site to Github.</li>
+</ol>
+
 ]]></content>
   </entry>
   
@@ -40,6 +50,20 @@
 <li>Do I need to run <code>rake generate</code> as before?</li>
 <li>Do I need to commit manually before running <code>rake deploy</code>?</li>
 </ul>
+
+
+<hr />
+
+<p>Update Jan 4, 2014 (3:26 PM):</p>
+
+<p><code>rake deploy</code> updates + publishes the site in one command:</p>
+
+<ol>
+<li>Pull any changes from github.</li>
+<li>Generate site locally.</li>
+<li>Commit new state of site to git.</li>
+<li>Push new state of site to Github.</li>
+</ol>
 
 ]]></content>
   </entry>
