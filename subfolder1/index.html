@@ -9,8 +9,7 @@
   <meta name="author" content="Ioannis Zannos">
 
   
-  <meta name="description" content="http://earlab.github.io/ Mysterious bugs. Is it GitHub caching the website, and delaying updates? The site&rsquo;s title reads: My Octopress Blog
-A &hellip;">
+  <meta name="description" content="After editing the site, always run rake generate before sending to the web via rake deploy. Occasionally the default name and subtitle of octopress &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,7 +75,7 @@ A &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/01/04/wrong-site-name-persists/">Wrong Site Name Persists</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/01/04/wrong-site-name-persists/">Take Care to Run Rake Generate</a></h1>
     
     
       <p class="meta">
@@ -99,7 +98,11 @@ A &hellip;">
   </header>
 
 
-  <div class="entry-content"><p><a href="http://earlab.github.io/">http://earlab.github.io/</a></p>
+  <div class="entry-content"><p>After editing the site, always run <code>rake generate</code> before sending to the web via <code>rake deploy</code>.  Occasionally the default name and subtitle of octopress reappears on edited pages, apparetly either because I forgot to run <code>rake generate</code>, or because it may have been overwritten by the watch process of rake.  Testing this here, keeping a log of changes and trials.</p>
+
+<h3>Details</h3>
+
+<p><a href="http://earlab.github.io/">http://earlab.github.io/</a></p>
 
 <p>Mysterious bugs.  Is it GitHub caching the website, and delaying updates?</p>
 
@@ -135,6 +138,8 @@ Testing again with a simple deploy &ndash; with G.D watching on the other side o
 <p>Jan 4, 2014 (4:36 PM) : One more test.</p>
 
 <p>Jan 4, 2014 (5:11 PM) : One more test &ndash; trying to reproduce the wrong headline.  It seems to appear only in the updated pages (this one).  Will it raise its head again just after running <code>rake generate</code>?</p>
+
+<p>Jan 4, 2014 (5:18 PM) : Even though I let <code>rake generate</code> end, the present pages&rsquo;s formatting is broken.  Perhaps I should stop the rake watch process.</p>
 </div>
   
   
@@ -439,7 +444,7 @@ Testing again with a simple deploy &ndash; with G.D watching on the other side o
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/01/04/wrong-site-name-persists/">Wrong Site Name Persists</a>
+        <a href="/blog/2014/01/04/wrong-site-name-persists/">Take Care to Run Rake Generate</a>
       </li>
     
       <li class="post">
