@@ -1,8 +1,10 @@
 $blockquote: $type-border !default;
-$sans: "proxima-nova" "PT Sans", "Helvetica Neue", Arial, sans-serif !default;
-$serif: "proxima-nova" "PT Serif", Georgia, Times, "Times New Roman", serif !default;
+$sans: "Cabin", "Helvetica Neue", Arial, sans-serif !default;
+//$serif: "proxima-nova" "PT Serif", Georgia, Times, "Times New Roman", serif !default;
+$serif: "Cabin", Georgia, Times, "Times New Roman", serif !default;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
-$heading-font-family: "proxima-nova" "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
+//$heading-font-family: "proxima-nova" "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
+$heading-font-family: "Cabin", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
 $header-title-font-family: $heading-font-family !default;
 $header-subtitle-font-family: $heading-font-family !default;
 
