@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T21:33:07+02:00</updated>
+  <updated>2014-01-04T21:57:44+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -390,7 +390,7 @@ LHCV : LHC {
     <id>http://earlab.github.io/blog/2014/01/04/installing-site-on-github</id>
     <content type="html"><![CDATA[<p>Installing the site on github was easy, using <a href="http://octopress.org/docs/deploying/github/">the instructions from the octopress site</a>.</p>
 
-<p>The site is now on the (earlab organization page)[<a href="http://earlab.github.io/">http://earlab.github.io/</a>].</p>
+<p>The site is now on the [earlab organization page)[<a href="http://earlab.github.io/">http://earlab.github.io/</a>).</p>
 
 <!--more-->
 
@@ -407,7 +407,7 @@ LHCV : LHC {
 
 <p>Update Jan 4, 2014 (3:29 PM)</p>
 
-<p><code>rake deploy</code> synchronizes with github, commits the new site, pushes to git in one command:</p>
+<p><code>rake deploy</code> synchronizes with github, commits the new site, pushes to git in one command it does three things:</p>
 
 <ol>
 <li>Pull any changes from github.</li>
@@ -416,7 +416,7 @@ LHCV : LHC {
 </ol>
 
 
-<p><em>However</em>: For some reason, blog post formatting is broken, unless I generate the site with <code>rake generate</code> first.</p>
+<p>Possibly, it also re-generates the site before committing.  <em>However</em>: For some reason, blog post formatting is broken, unless I generate the site with <code>rake generate</code> first.  I suspect this is because not all files are completely updated before the commit starts.  For this reason, I have to run <code>rake generate</code> manually before doing <code>rake deploy</code>.  Even then, I wait some minutes before doing the deploy, for good measure.</p>
 
 <h3>Facit</h3>
 

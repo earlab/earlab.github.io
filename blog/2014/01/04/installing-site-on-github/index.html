@@ -9,7 +9,7 @@
   <meta name="author" content="Ioannis Zannos">
 
   
-  <meta name="description" content="Installing the site on github was easy, using the instructions from the octopress site. The site is now on the (earlab organization page)[http:// &hellip;">
+  <meta name="description" content="Installing the site on github was easy, using the instructions from the octopress site. The site is now on the [earlab organization page)[http:// &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,7 +96,7 @@
 
 <div class="entry-content"><p>Installing the site on github was easy, using <a href="http://octopress.org/docs/deploying/github/">the instructions from the octopress site</a>.</p>
 
-<p>The site is now on the (earlab organization page)[<a href="http://earlab.github.io/">http://earlab.github.io/</a>].</p>
+<p>The site is now on the [earlab organization page)[<a href="http://earlab.github.io/">http://earlab.github.io/</a>).</p>
 
 <!--more-->
 
@@ -113,7 +113,7 @@
 
 <p>Update Jan 4, 2014 (3:29 PM)</p>
 
-<p><code>rake deploy</code> synchronizes with github, commits the new site, pushes to git in one command:</p>
+<p><code>rake deploy</code> synchronizes with github, commits the new site, pushes to git in one command it does three things:</p>
 
 <ol>
 <li>Pull any changes from github.</li>
@@ -122,7 +122,7 @@
 </ol>
 
 
-<p><em>However</em>: For some reason, blog post formatting is broken, unless I generate the site with <code>rake generate</code> first.</p>
+<p>Possibly, it also re-generates the site before committing.  <em>However</em>: For some reason, blog post formatting is broken, unless I generate the site with <code>rake generate</code> first.  I suspect this is because not all files are completely updated before the commit starts.  For this reason, I have to run <code>rake generate</code> manually before doing <code>rake deploy</code>.  Even then, I wait some minutes before doing the deploy, for good measure.</p>
 
 <h3>Facit</h3>
 
