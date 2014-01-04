@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Earlab]]></title>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2014-01-04T14:21:02+02:00</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Ioannis Zannos]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Posting Excerpts]]></title>
+    <link href="http://yoursite.com/blog/2014/01/04/posting-excerpts/"/>
+    <updated>2014-01-04T13:48:45+02:00</updated>
+    <id>http://yoursite.com/blog/2014/01/04/posting-excerpts</id>
+    <content type="html"><![CDATA[<p>See <a href="http://stackoverflow.com/questions/19389451/how-can-i-get-a-post-excerpt-in-jekyll">stackoverflow</a></p>
+
+<!--more-->
+
+
+<p>In brief:</p>
+
+<pre><code>{{ post.excerpt }}
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Google Font Selection]]></title>
+    <link href="http://yoursite.com/blog/2014/01/04/google-font-selection/"/>
+    <updated>2014-01-04T03:46:46+02:00</updated>
+    <id>http://yoursite.com/blog/2014/01/04/google-font-selection</id>
+    <content type="html"><![CDATA[<p>Selection of open fonts from google</p>
+<!--more-->
+<p>See: http://www.google.com/fonts</p>
+
+<p>See http://melandri.net/2012/02/14/octopress-theme-customization/ about how to use them in octopress, and a nice choice of non-serif (Lato, &#8230;).</p>
+
+<h3>Considerations after Sacha Greif</h3>
+
+<a href="http://sachagreif.com/google-webfonts-that-dont-suck/">Sacha Greif on google webfonts that don&#8217;t suck</a>
+<br>
+<a href="http://sachagreif.com/more-google-webfonts-that-dont-suck/">Follow up to previous post by Sacha Greif</a>
+
+<p>tried out:</p>
+<ul>
+  <li>Ubuntu (Favorite of Sacha Greif)</li>
+  <li>Cabin</li>
+  <li>Imprima</li>
+  <li>Varela</li>
+  <li>PT Sans</li>
+  <li>Open Sans</li>
+  <li>Lato</li>
+</ul>
+
+<p>Chose Lato.</p>
+
+<h3>Older selection, many fonts selected in a hurry</h3>
+<pre><code>
+&lt;link href='http://fonts.googleapis.com/css?family=Rambla:400, 700, 400italic, 700italic |
+Source+Sans+Pro:200, 300, 400, 600, 700, 900, 200italic, 300italic, 400italic, 600italic,
+00italic, 900italic | Overlock | Noto+Sans | Lato | Cabin | BenchNine | PT+Sans |
+abin+Condensed | Arimo | Quicksand | Carrois+Gothic | Asap | Cantarell | Muli |
+legreya+Sans | Imprima | Telex | Rosario | Pathway+Gothic+One | Chivo |
+uattrocento+Sans | Raleway+Dots | Alef | Open+Sans | Open+Sans+Condensed:300 |
+unito | Oxygen | Archivo+Narrow&amp;subset=latin, latin-ext, greek-ext, greek'
+el='stylesheet' type='text/css'&gt;
+</code></pre>
+
+<p>Usage examples from google: http://www.google.com/fonts#UsePlace:use</p>
+
+<pre>
+font-family: 'Rambla', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Overlock', cursive;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Cabin', sans-serif;
+font-family: 'BenchNine', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Cabin Condensed', sans-serif;
+font-family: 'Arimo', sans-serif;
+font-family: 'Quicksand', sans-serif;
+</pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Logo Style Font]]></title>
+    <link href="http://yoursite.com/blog/2014/01/04/logo-style-font/"/>
+    <updated>2014-01-04T02:45:55+02:00</updated>
+    <id>http://yoursite.com/blog/2014/01/04/logo-style-font</id>
+    <content type="html"><![CDATA[<p>Demo of custom font through span + class</p>
+<!--more-->
+<p>from: svbtle.com / see also my clone of the style of that site</p>
+<p>The word <span class="logotype">EARLAB</span> is enclosed in a span with
+class &#8220;logotype&#8221;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Provide File-relative Paths]]></title>
+    <link href="http://yoursite.com/blog/2014/01/04/relative-paths/"/>
+    <updated>2014-01-04T00:19:27+02:00</updated>
+    <id>http://yoursite.com/blog/2014/01/04/relative-paths</id>
+    <content type="html"><![CDATA[<p>From: <a href="http://stackoverflow.com/questions/7985081/how-to-deploy-a-jekyll-site-locally-with-css-js-and-background-images-included">stackoverflow</a>.</p>
+
+<!--more-->
+
+
+<p>Use liquid:</p>
+
+<pre><code>{% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
+{% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
+</code></pre>
+
+<p>This:</p>
+
+<pre><code>&lt;link href="{{ relative }}css/main.css" rel="stylesheet" /&gt;
+&lt;script src="{{ relative  }}scripts/jquery.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Becomes this:</p>
+
+<pre><code>&lt;link href="../../../../../css/main.css" rel="stylesheet" /&gt;
+&lt;script src="../../../../../scripts/jquery.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Trying this in practice:</p>
+
+<p><a href="../../../../../javascripts/github.js">a javascript file</a></p>
+
+<p><a href="../../../../../stylesheets/screen.css">a css file</a></p>
+]]></content>
+  </entry>
+  
+</feed>

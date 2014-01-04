@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Earlab</title>
+  <title>Provide File-relative Paths - Earlab</title>
   <meta name="author" content="Ioannis Zannos">
 
   
-  <meta name="description" content="See stackoverflow ">
+  <meta name="description" content="From: stackoverflow. Use liquid: {% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
+{% capture relative %}{% &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yoursite.com">
+  <link rel="canonical" href="http://yoursite.com/blog/2014/01/04/relative-paths">
   <link href="/favicon.png" rel="icon">
   <script src="/javascripts/typekit.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
@@ -66,136 +67,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/01/04/posting-excerpts/">Posting Excerpts</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-04T13:48:45+02:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>See <a href="http://stackoverflow.com/questions/19389451/how-can-i-get-a-post-excerpt-in-jekyll">stackoverflow</a></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/01/04/posting-excerpts/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/04/google-font-selection/">Google Font Selection</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-04T03:46:46+02:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Selection of open fonts from google</p>
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/01/04/google-font-selection/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/04/logo-style-font/">Logo Style Font</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-04T02:45:55+02:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Demo of custom font through span + class</p>
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/01/04/logo-style-font/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/04/relative-paths/">Provide File-relative Paths</a></h1>
+      <h1 class="entry-title">Provide File-relative Paths</h1>
     
     
       <p class="meta">
@@ -218,25 +95,82 @@
   </header>
 
 
-  <div class="entry-content"><p>From: <a href="http://stackoverflow.com/questions/7985081/how-to-deploy-a-jekyll-site-locally-with-css-js-and-background-images-included">stackoverflow</a>.</p>
+<div class="entry-content"><p>From: <a href="http://stackoverflow.com/questions/7985081/how-to-deploy-a-jekyll-site-locally-with-css-js-and-background-images-included">stackoverflow</a>.</p>
+
+<!--more-->
+
+
+<p>Use liquid:</p>
+
+<pre><code>{% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
+{% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
+</code></pre>
+
+<p>This:</p>
+
+<pre><code>&lt;link href="{{ relative }}css/main.css" rel="stylesheet" /&gt;
+&lt;script src="{{ relative  }}scripts/jquery.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Becomes this:</p>
+
+<pre><code>&lt;link href="../../../../../css/main.css" rel="stylesheet" /&gt;
+&lt;script src="../../../../../scripts/jquery.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Trying this in practice:</p>
+
+<p><a href="../../../../../javascripts/github.js">a javascript file</a></p>
+
+<p><a href="../../../../../stylesheets/screen.css">a css file</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Ioannis Zannos</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-04T00:19:27+02:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/blog/2014/01/04/relative-paths/" data-via="" data-counturl="http://yoursite.com/blog/2014/01/04/relative-paths/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/01/04/logo-style-font/" title="Next Post: logo style font">logo style font &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/01/04/relative-paths/">Read on &rarr;</a>
-    </footer>
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -268,6 +202,7 @@
 
   
 </aside>
+
 
     </div>
   </div>
