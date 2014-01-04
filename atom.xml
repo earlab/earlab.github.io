@@ -1,23 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Earlab]]></title>
-  <link href="http://earlab.github.io/atom.xml" rel="self"/>
-  <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T15:50:09+02:00</updated>
-  <id>http://earlab.github.io/</id>
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2014-01-04T16:03:02+02:00</updated>
+  <id>http://yoursite.com/</id>
   <author>
-    <name><![CDATA[Ioannis Zannos]]></name>
+    <name><![CDATA[Your Name]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
+    <title type="html"><![CDATA[Using Gists]]></title>
+    <link href="http://yoursite.com/blog/2014/01/04/using-gists/"/>
+    <updated>2014-01-04T15:58:59+02:00</updated>
+    <id>http://yoursite.com/blog/2014/01/04/using-gists</id>
+    <content type="html"><![CDATA[<p>Embedding gists in the octopress blog. Here is a test.</p>
+
+<!--more-->
+
+
+
+
+<div><script src='https://gist.github.com/8071915.js?file=lhcsc'></script>
+<noscript><pre><code>/*
+// synth definition already written in SynthDef.synthDefDir
+(
+SynthDef(\LHCV, { | out=0, clk=1, vclk=2, id=0, step=0, resetVal=0|
+    var clock, varclock, latch;
+    clock = LFPulse.kr(clk);
+    varclock = LFPulse.kr(vclk);
+    latch = Latch.kr(Stepper.kr(varclock, step: step, resetval: resetVal), clock);
+    Out.kr(out, SendTrig.kr(Changed.kr(latch), id, latch))
+}).writeOnce;
+)
+
+*/
+
+/*
+TODO:
+- There is a problem in the initial output of the counter? (must be zero)
+- The secondary GUI (Slider) has a problem with it&#39;s flashDisplay and the initial position of the slider (though works OK).
+- There are 2 dependants:
+    * see var &lt;&gt;updater
+    * I suppose it is feasible to have only one update method ..
+- I have to fix the getter, setter vars
+- ... and embed the slider to the main window !!
+*/
+
+/*
+
+a = LHCV().start // see LHC example for musical example
+a.counterOut // returns the current value of the Counter
+a.vclk // returns the current value of the Var Clk rate (in Hz)
+a.counterIn //  returns the current input
+// set main clk (latched)
+a.setClk_(value)
+*/
+
+LHCV : LHC {
+
+    var &lt;&gt;clk=1, &lt;&gt;vclk=1;
+    var &lt;&gt;synth;
+    var &lt;&gt;counterIn=0, &lt;&gt;counterOut=0;
+    var &lt;&gt;input=0;
+    var osc;
+    var &lt;&gt;binaryString;
+    // the variables for the slider of the Var Clk rate
+    var &lt;&gt;model, &lt;&gt;setValueFunction, &lt;&gt;bounds, &lt;&gt;windowVClk, &lt;&gt;numberboxVClk, &lt;&gt;sliderVClk, &lt;&gt;updater;
+    var &lt;posedgeDisplayVClk, &lt;routineFlash;
+    var &lt;&gt;monitor;
+    var &lt;x, &lt;y;
+
+    *new { | player |
+        ^super.new.init(player);
+    }
+
+    init { | player |
+        this.makeFsmDecoder;
+        this.addPlayer(player);
+    }
+
+    start { | x, y |
+        this.ugenconstr;
+        this.oscrespond;
+        this.makeWindow;
+        this.makeRoutine;
+        this.makeSlider;
+        this.startMonitor;
+    }
+
+    ugenconstr { | clock=1, vclock=1, step=1, resetVal=0 |
+        Server.default.waitForBoot {
+            synth = Synth(\LHCV, [clk: clock, vclk: vclock, step: step, resetVal: resetVal]);
+        }
+    }
+
+    oscrespond {
+        osc = OSCFunc.newMatching({ arg msg, time;
+            [time, msg].postln;
+            counterOut = msg[3];
+            counterOut.asInteger.asBinaryString(3).postln;
+        },&#39;/tr&#39;, Server.default.addr);
+    }
+
+    startMonitor { | x, y |
+        monitor = LHCVmonitor.new(x, y);
+    }
+
+    setInput_ { | value |
+        input = value;
+        synth.set(\step, input);
+    }
+
+    setClk_ { | value |
+        clk = value;
+        synth.set(\clk, clk);
+    }
+
+    setVClk_ { | value |
+        vclk = value;
+        synth.set(\vclk, vclk);
+    }
+
+    makeRoutine {
+        if (routine.isNil) {
+            routine = {
+                loop {
+                    this.flashPositiveEdgeDisplay;
+                    counterIn = ([bit0.value, bit1.value, bit2.value] * [1, 2, 4]).sum;
+                    if (resetbutton.value &gt; 0) {
+                        counterOut = 0;
+                        fsmDecoder.changed(\reset);
+                        &quot;fsmDecoder should now broadcast change RESET&quot;.postln;
+                    }{
+                        // change step in Stepper
+                        this.setInput_(counterIn);
+                        fsmDecoder.changed(\counter, counterOut);
+                    };
+                    counterDisplay.value = counterOut;
+                    this.calculateFSMstate(counterOut);
+                    // clk is reciprocal because it&#39;s value is in Hz
+                    clk.reciprocal.wait;
+                }
+            }.fork(AppClock);
+        }
+    }
+
+    windowClosed {
+        window = nil;
+        this.stopSynthsAndProcesses;
+        fsmDecoder.releaseDependants;
+        model.releaseDependants;
+    }
+
+    stopSynthsAndProcesses {
+        routine.stop;
+        routine = 0;
+        synth.free;
+        osc.free;
+    }
+
+    flashPositiveEdgeDisplay {
+        {
+            positiveEdgeDisplay.value = 1;
+            (clk / 3).wait;
+            positiveEdgeDisplay.value = 0;
+            (clk / 3).wait;
+        }.fork(AppClock);
+    }
+
+    calculateFSMstate { | counter |
+        // current state + input = next state + output
+        {
+            counter.asInteger.asBinaryString(3) do: { | digit |
+                fsmDecoder input: (digit == $1).binaryValue;
+                // clk is reciprocal because it&#39;s value is in Hz (see SynthDef(\LHCV,...)
+                (clk.reciprocal / 3).wait;
+            };
+        }.fork(AppClock);
+    }
+
+    makeSlider {
+        if (windowVClk.isNil) { this.prMakeSlider } { windowVClk.front };
+    }
+
+    prMakeSlider {
+        this.flashDisplayVClk;
+        //model
+        model = (myValue: this.vclk);
+
+        setValueFunction = {|value|
+                    model [\myValue] = value;
+                    model.changed(\value, value);
+        };
+
+        //bounds
+        bounds = ControlSpec(0.01, 50, \linear, 0.01); // min, max, mapping, step
+        //view
+        windowVClk = Window(&quot;slider for LHCV&quot;, Rect(600,200, 280, 70));
+        posedgeDisplayVClk = Button(windowVClk, Rect(10, 20, 18, 18))
+                    .states_([[&quot; &quot;, Color.black, Color.black], [&quot; &quot;, Color.yellow, Color.yellow]]);
+        numberboxVClk = NumberBox(windowVClk, Rect(30, 20, 40, 20))
+                    .value_(model[\myValue])
+                    .action_({|view| setValueFunction.value(bounds.map(view.value)) });
+        sliderVClk = Slider(windowVClk, Rect(73, 20, 200, 20))
+                    .value_(model[\myValue])
+                    .action_({|view| setValueFunction.value(bounds.map(view.value)) });
+
+        windowVClk.front;
+        windowVClk.onClose_({model.removeDependant(updater)});
+
+        //updater
+        updater = {|theChanger, what, val|
+                    {
+                    if(what == \value, {
+                        numberboxVClk.value_(val);
+                        sliderVClk.value_(bounds.unmap(val));
+                        //
+                        &quot;VClk = &quot;.post; val.value.postln;
+                        this.setVClk_(val.value);
+                });
+                    }.defer;
+                };
+        model.addDependant(updater);
+
+    }
+
+    // the flasher for the Variable Clock rate
+    // you can not run 2 different routines into the same Class?
+    flashDisplayVClk {
+        if ((routineFlash.isNil)&amp;&amp;(vclk.notNil)) {
+            routineFlash = {
+                loop {
+                    posedgeDisplayVClk.value = 1;
+                    vclk.reciprocal.wait;
+                    posedgeDisplayVClk.value = 0;
+                    vclk.reciprocal.wait;
+                }
+            }.fork(AppClock);
+        }
+    }
+
+    update { | who, what, value |
+//      postf(&quot;% updated: % to: %\n&quot;, who, what, value);
+        switch (what,
+            \symbol, { encoderDisplay.string = value.asString },
+            \state, { }
+        );
+    }
+
+}</code></pre></noscript></div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Checking Rake Deploy on GitHub]]></title>
-    <link href="http://earlab.github.io/blog/2014/01/04/checking-rake-deploy-on-github/"/>
+    <link href="http://yoursite.com/blog/2014/01/04/checking-rake-deploy-on-github/"/>
     <updated>2014-01-04T15:22:06+02:00</updated>
-    <id>http://earlab.github.io/blog/2014/01/04/checking-rake-deploy-on-github</id>
+    <id>http://yoursite.com/blog/2014/01/04/checking-rake-deploy-on-github</id>
     <content type="html"><![CDATA[<p>Had to remove the repository and create it again.  Creating the README on github messed things up.</p>
 
 <p>Result: Need to first run <code>rake generate</code> and then <code>rake deploy</code> to updates + publish the site.  <code>rake deploy</code> alone leaves posts in an unformatted state.  (Why?)</p>
@@ -26,9 +273,9 @@
   
   <entry>
     <title type="html"><![CDATA[Installing Site on Github]]></title>
-    <link href="http://earlab.github.io/blog/2014/01/04/installing-site-on-github/"/>
+    <link href="http://yoursite.com/blog/2014/01/04/installing-site-on-github/"/>
     <updated>2014-01-04T14:51:52+02:00</updated>
-    <id>http://earlab.github.io/blog/2014/01/04/installing-site-on-github</id>
+    <id>http://yoursite.com/blog/2014/01/04/installing-site-on-github</id>
     <content type="html"><![CDATA[<p>Installing the site on github was easy, using <a href="http://octopress.org/docs/deploying/github/">the instructions from the octopress site</a>.</p>
 
 <p>The site is now on the (earlab organization page)[<a href="http://earlab.github.io/">http://earlab.github.io/</a>].</p>
@@ -73,9 +320,9 @@
   
   <entry>
     <title type="html"><![CDATA[Posting Excerpts]]></title>
-    <link href="http://earlab.github.io/blog/2014/01/04/posting-excerpts/"/>
+    <link href="http://yoursite.com/blog/2014/01/04/posting-excerpts/"/>
     <updated>2014-01-04T13:48:45+02:00</updated>
-    <id>http://earlab.github.io/blog/2014/01/04/posting-excerpts</id>
+    <id>http://yoursite.com/blog/2014/01/04/posting-excerpts</id>
     <content type="html"><![CDATA[<p>See <a href="http://stackoverflow.com/questions/19389451/how-can-i-get-a-post-excerpt-in-jekyll">stackoverflow</a></p>
 
 <!--more-->
@@ -90,9 +337,9 @@
   
   <entry>
     <title type="html"><![CDATA[Google Font Selection]]></title>
-    <link href="http://earlab.github.io/blog/2014/01/04/google-font-selection/"/>
+    <link href="http://yoursite.com/blog/2014/01/04/google-font-selection/"/>
     <updated>2014-01-04T03:46:46+02:00</updated>
-    <id>http://earlab.github.io/blog/2014/01/04/google-font-selection</id>
+    <id>http://yoursite.com/blog/2014/01/04/google-font-selection</id>
     <content type="html"><![CDATA[<p>Selection of open fonts from google</p>
 <!--more-->
 <p>See: http://www.google.com/fonts</p>
@@ -150,9 +397,9 @@ font-family: 'Quicksand', sans-serif;
   
   <entry>
     <title type="html"><![CDATA[Logo Style Font]]></title>
-    <link href="http://earlab.github.io/blog/2014/01/04/logo-style-font/"/>
+    <link href="http://yoursite.com/blog/2014/01/04/logo-style-font/"/>
     <updated>2014-01-04T02:45:55+02:00</updated>
-    <id>http://earlab.github.io/blog/2014/01/04/logo-style-font</id>
+    <id>http://yoursite.com/blog/2014/01/04/logo-style-font</id>
     <content type="html"><![CDATA[<p>Demo of custom font through span + class</p>
 <!--more-->
 <p>from: svbtle.com / see also my clone of the style of that site</p>
@@ -163,9 +410,9 @@ class &#8220;logotype&#8221;</p>
   
   <entry>
     <title type="html"><![CDATA[Provide File-relative Paths]]></title>
-    <link href="http://earlab.github.io/blog/2014/01/04/relative-paths/"/>
+    <link href="http://yoursite.com/blog/2014/01/04/relative-paths/"/>
     <updated>2014-01-04T00:19:27+02:00</updated>
-    <id>http://earlab.github.io/blog/2014/01/04/relative-paths</id>
+    <id>http://yoursite.com/blog/2014/01/04/relative-paths</id>
     <content type="html"><![CDATA[<p>From: <a href="http://stackoverflow.com/questions/7985081/how-to-deploy-a-jekyll-site-locally-with-css-js-and-background-images-included">stackoverflow</a>.</p>
 
 <!--more-->
