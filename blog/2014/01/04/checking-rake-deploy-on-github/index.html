@@ -9,7 +9,7 @@
   <meta name="author" content="Ioannis Zannos">
 
   
-  <meta name="description" content="Had to remove the repository and create it again. Creating the README on github messed things up. Result: rake deploy updates + publishes the site in &hellip;">
+  <meta name="description" content="Had to remove the repository and create it again. Creating the README on github messed things up. Result: Need to first run rake generate and then &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,15 +96,7 @@
 
 <div class="entry-content"><p>Had to remove the repository and create it again.  Creating the README on github messed things up.</p>
 
-<p>Result: <code>rake deploy</code> updates + publishes the site in one command.</p>
-
-<ol>
-<li>Pull any changes from github.</li>
-<li>Generate site locally.</li>
-<li>Commit new state of site to git.</li>
-<li>Push new state of site to Github.</li>
-</ol>
-
+<p>Result: Need to first run <code>rake generate</code> and then <code>rake deploy</code> to updates + publish the site.  <code>rake deploy</code> alone leaves posts in an unformatted state.  (Why?)</p>
 </div>
 
 

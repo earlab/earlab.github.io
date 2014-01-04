@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T15:28:15+02:00</updated>
+  <updated>2014-01-04T15:50:09+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -20,15 +20,7 @@
     <id>http://earlab.github.io/blog/2014/01/04/checking-rake-deploy-on-github</id>
     <content type="html"><![CDATA[<p>Had to remove the repository and create it again.  Creating the README on github messed things up.</p>
 
-<p>Result: <code>rake deploy</code> updates + publishes the site in one command.</p>
-
-<ol>
-<li>Pull any changes from github.</li>
-<li>Generate site locally.</li>
-<li>Commit new state of site to git.</li>
-<li>Push new state of site to Github.</li>
-</ol>
-
+<p>Result: Need to first run <code>rake generate</code> and then <code>rake deploy</code> to updates + publish the site.  <code>rake deploy</code> alone leaves posts in an unformatted state.  (Why?)</p>
 ]]></content>
   </entry>
   
@@ -54,15 +46,26 @@
 
 <hr />
 
-<p>Update Jan 4, 2014 (3:26 PM):</p>
+<p>Update Jan 4, 2014 (3:29 PM)</p>
 
-<p><code>rake deploy</code> updates + publishes the site in one command:</p>
+<p><code>rake deploy</code> synchronizes with github, commits the new site, pushes to git in one command:</p>
 
 <ol>
 <li>Pull any changes from github.</li>
-<li>Generate site locally.</li>
 <li>Commit new state of site to git.</li>
 <li>Push new state of site to Github.</li>
+</ol>
+
+
+<p><em>However</em>: For some reason, blog post formatting is broken, unless I generate the site with <code>rake generate</code> first.</p>
+
+<h3>Facit</h3>
+
+<p>To successfully push the site to github, follow 2 steps:</p>
+
+<ol>
+<li>Run <code>rake generate</code> (and wait till that is finished).</li>
+<li>Run <code>rake deploy</code> to push the generated site to github.</li>
 </ol>
 
 ]]></content>
