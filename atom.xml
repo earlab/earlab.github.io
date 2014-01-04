@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T23:28:26+02:00</updated>
+  <updated>2014-01-05T00:05:39+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -510,7 +510,7 @@ LHCV : LHC {
   <li>Questrial</li>
 </ul>
 
-<p>Chose Lato.</p>
+<p>Chose Questrial, after Lato.  Questrial has no <em>italic</em> or <strong>bold</strong> font.  </p>
 
 <p>Alternative / considering: Questrial (has only regular face, must combine with other font for italic, bold)</p>
 
