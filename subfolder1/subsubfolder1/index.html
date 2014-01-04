@@ -10,7 +10,7 @@
 
   
   <meta name="description" content="Summary (&ldquo;TL;DR&rdquo;) Must be careful to always run rake generate before rake deploy.
-GitHub takes some time to update site after each push. &hellip;">
+GitHub takes some time to update site after each push. ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,66 +107,12 @@ GitHub takes some time to update site after each push. &hellip;">
 </ol>
 
 
-<h3>Details</h3>
-
-<p>After editing the site, always run <code>rake generate</code> before sending to the web via <code>rake deploy</code>.  Occasionally the default name and subtitle of octopress &ldquo;My Octopress Blog / A blogging framework for hackers&rdquo; reappears on edited pages, apparetly either because I forgot to run <code>rake generate</code>, or because it may have been overwritten by the watch process of rake.  Testing this here, keeping a log of changes and trials.</p>
-
-<p><a href="http://earlab.github.io/">http://earlab.github.io/</a></p>
-
-<p>Mysterious bugs.  Is it GitHub caching the website, and delaying updates?</p>
-
-<p>The site&rsquo;s title reads (on some pages):</p>
-
-<pre><code>My Octopress Blog
-A blogging framework for hackers.
-</code></pre>
-
-<p>But the <code>index.html</code> page of the site shows the correct title:</p>
-
-<pre><code>Earlab
-Coding for Art
-</code></pre>
-
-<p>Why the difference?</p>
-
-<h3>Update</h3>
-
-<p>Creating the present post,</p>
-
-<p>rerunning <code>rake generate</code></p>
-
-<p>and then <code>rake deploy</code></p>
-
-<p>fixed it.</p>
-
-<p>Then re-running the same, after adding the present comments, but not creating new posts, the problem reappeared.</p>
-
-<p>Jan 4, 2014 (4:26 PM):
-Testing again with a simple deploy &ndash; with G.D watching on the other side over the net.</p>
-
-<p>Jan 4, 2014 (4:36 PM) : One more test.</p>
-
-<p>Jan 4, 2014 (5:11 PM) : One more test &ndash; trying to reproduce the wrong headline.  It seems to appear only in the updated pages (this one).  Will it raise its head again just after running <code>rake generate</code>?</p>
-
-<p>Jan 4, 2014 (5:18 PM) : Even though I let <code>rake generate</code> end, the present pages&rsquo;s formatting is broken.  Perhaps I should stop the rake watch process.</p>
-
-<p>Jan 4, 2014 (5:21 PM) : Stopped rake watch.  Trying <code>rake deploy</code> without running <code>rake generate</code> first.</p>
-
-<p>Jan 4, 2014 (5:22 PM) : Broken formatting.  Retrying: Running <code>rake generate</code>.</p>
-
-<p>Jan 4, 2014 (5:23 PM) : Edit and rerun <code>rake generate</code>.</p>
-
-<p>Jan 4, 2014 (5:25 PM) : (after <code>rake deploy</code>): Page renders correctly locally, but is broken on GitHub.</p>
-
-<h3>Jan 4, 2014 (5:27 PM) : Conclusions</h3>
-
-<ol>
-<li>Must be careful to always generate after saving.</li>
-<li>GitHub takes some time to update site after each push.</li>
-</ol>
-
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/01/04/wrong-site-name-persists/">Read on &rarr;</a>
+    </footer>
   
 
 

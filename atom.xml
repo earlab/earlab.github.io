@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-04T17:44:18+02:00</updated>
+  <updated>2014-01-04T19:00:39+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -24,6 +24,9 @@
 <li>Must be careful to always run <code>rake generate</code> before <code>rake deploy</code>.</li>
 <li>GitHub takes some time to update site after each push.</li>
 </ol>
+
+
+<!--more-->
 
 
 <h3>Details</h3>
