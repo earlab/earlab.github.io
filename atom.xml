@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2014-01-06T21:12:00+01:00</updated>
-  <id>http://yoursite.com/</id>
+  <title><![CDATA[Earlab]]></title>
+  <link href="http://earlab.github.io/atom.xml" rel="self"/>
+  <link href="http://earlab.github.io/"/>
+  <updated>2014-01-06T22:09:21+01:00</updated>
+  <id>http://earlab.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Ioannis Zannos]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Vicky in Paris]]></title>
-    <link href="http://yoursite.com/blog/2014/01/06/vicky-in-paris/"/>
+    <link href="http://earlab.github.io/blog/2014/01/06/vicky-in-paris/"/>
     <updated>2014-01-06T15:56:33+01:00</updated>
-    <id>http://yoursite.com/blog/2014/01/06/vicky-in-paris</id>
+    <id>http://earlab.github.io/blog/2014/01/06/vicky-in-paris</id>
     <content type="html"><![CDATA[<p>with vicky @ montmartre: cafe Au Clairon des Chasseurs: 01/06/14 15:45:35 :travel:friends:webgl:cafe:chuck:</p>
 
 <p><a href="http://vicksbiztheory.tumblr.com">http://vicksbiztheory.tumblr.com</a></p>
@@ -28,9 +28,9 @@
   
   <entry>
     <title type="html"><![CDATA[Categories]]></title>
-    <link href="http://yoursite.com/blog/2014/01/04/categories/"/>
+    <link href="http://earlab.github.io/blog/2014/01/04/categories/"/>
     <updated>2014-01-04T18:05:17+01:00</updated>
-    <id>http://yoursite.com/blog/2014/01/04/categories</id>
+    <id>http://earlab.github.io/blog/2014/01/04/categories</id>
     <content type="html"><![CDATA[<p>Next, use categories (= keywords, tags) to group posts into topics, in octopress.</p>
 
 <p>Categories should be listed in the header of a page.  <code>rake new_post['page name']</code> creates a heading in the poster for doing this.  To input more than one category, or a category consisting of more than one word, use one of the formats explained in following example from <a href="http://octopress.org/docs/blogging/">http://octopress.org/docs/blogging/</a> :</p>
@@ -63,9 +63,9 @@
   
   <entry>
     <title type="html"><![CDATA[Take Care to Run Rake Generate]]></title>
-    <link href="http://yoursite.com/blog/2014/01/04/wrong-site-name-persists/"/>
+    <link href="http://earlab.github.io/blog/2014/01/04/wrong-site-name-persists/"/>
     <updated>2014-01-04T15:12:11+01:00</updated>
-    <id>http://yoursite.com/blog/2014/01/04/wrong-site-name-persists</id>
+    <id>http://earlab.github.io/blog/2014/01/04/wrong-site-name-persists</id>
     <content type="html"><![CDATA[<h3>Summary (&ldquo;TL;DR&rdquo;)</h3>
 
 <ol>
@@ -79,7 +79,7 @@
 
 <h3>Details</h3>
 
-<p>After editing the site, always run <code>rake generate</code> before sending to the web via <code>rake deploy</code>.  Occasionally the default name and subtitle of octopress &ldquo;My Octopress Blog / A blogging framework for hackers&rdquo; reappears on edited pages, apparetly either because I forgot to run <code>rake generate</code>, or because it may have been overwritten by the watch process of rake.  Testing this here, keeping a log of changes and trials.</p>
+<p>After editing the site, always run <code>rake generate</code> before sending to the web via <code>rake deploy</code>.  Occasionally the default name and subtitle of octopress &ldquo;My Octopress Blog / A blogging framework for hackers&rdquo; reappears on edited pages, apparently either because I forgot to run <code>rake generate</code>, or because it may have been overwritten by the watch process of rake.  Testing this here, keeping a log of changes and trials.</p>
 
 <p><a href="http://earlab.github.io/">http://earlab.github.io/</a></p>
 
@@ -140,9 +140,9 @@ Testing again with a simple deploy &ndash; with G.D watching on the other side o
   
   <entry>
     <title type="html"><![CDATA[Including Gists and Other Code]]></title>
-    <link href="http://yoursite.com/blog/2014/01/04/using-gists/"/>
+    <link href="http://earlab.github.io/blog/2014/01/04/using-gists/"/>
     <updated>2014-01-04T14:58:59+01:00</updated>
-    <id>http://yoursite.com/blog/2014/01/04/using-gists</id>
+    <id>http://earlab.github.io/blog/2014/01/04/using-gists</id>
     <content type="html"><![CDATA[<p>Embedding code, by pasting, including files, including gists in the octopress blog.  Here are some notes about styles and ways of quoting code, and a test.</p>
 
 <!--more-->
@@ -419,9 +419,9 @@ LHCV : LHC {
   
   <entry>
     <title type="html"><![CDATA[Checking Rake Deploy on GitHub]]></title>
-    <link href="http://yoursite.com/blog/2014/01/04/checking-rake-deploy-on-github/"/>
+    <link href="http://earlab.github.io/blog/2014/01/04/checking-rake-deploy-on-github/"/>
     <updated>2014-01-04T14:22:06+01:00</updated>
-    <id>http://yoursite.com/blog/2014/01/04/checking-rake-deploy-on-github</id>
+    <id>http://earlab.github.io/blog/2014/01/04/checking-rake-deploy-on-github</id>
     <content type="html"><![CDATA[<p>Had to remove the repository and create it again.  Creating the README on github messed things up.</p>
 
 <p>Result: Need to first run <code>rake generate</code> and then <code>rake deploy</code> to updates + publish the site.  <code>rake deploy</code> alone leaves posts in an unformatted state.  (Why?)</p>
@@ -430,9 +430,9 @@ LHCV : LHC {
   
   <entry>
     <title type="html"><![CDATA[Installing Site on Github]]></title>
-    <link href="http://yoursite.com/blog/2014/01/04/installing-site-on-github/"/>
+    <link href="http://earlab.github.io/blog/2014/01/04/installing-site-on-github/"/>
     <updated>2014-01-04T13:51:52+01:00</updated>
-    <id>http://yoursite.com/blog/2014/01/04/installing-site-on-github</id>
+    <id>http://earlab.github.io/blog/2014/01/04/installing-site-on-github</id>
     <content type="html"><![CDATA[<p>Installing the site on github was easy, using <a href="http://octopress.org/docs/deploying/github/">the instructions from the octopress site</a>.</p>
 
 <p>The site is now on the <a href="http://earlab.github.io/">earlab organization page</a>.</p>
@@ -477,9 +477,9 @@ LHCV : LHC {
   
   <entry>
     <title type="html"><![CDATA[Posting Excerpts]]></title>
-    <link href="http://yoursite.com/blog/2014/01/04/posting-excerpts/"/>
+    <link href="http://earlab.github.io/blog/2014/01/04/posting-excerpts/"/>
     <updated>2014-01-04T12:48:45+01:00</updated>
-    <id>http://yoursite.com/blog/2014/01/04/posting-excerpts</id>
+    <id>http://earlab.github.io/blog/2014/01/04/posting-excerpts</id>
     <content type="html"><![CDATA[<p>See <a href="http://stackoverflow.com/questions/19389451/how-can-i-get-a-post-excerpt-in-jekyll">stackoverflow</a></p>
 
 <!--more-->
@@ -494,9 +494,9 @@ LHCV : LHC {
   
   <entry>
     <title type="html"><![CDATA[Google Font Selection]]></title>
-    <link href="http://yoursite.com/blog/2014/01/04/google-font-selection/"/>
+    <link href="http://earlab.github.io/blog/2014/01/04/google-font-selection/"/>
     <updated>2014-01-04T02:46:46+01:00</updated>
-    <id>http://yoursite.com/blog/2014/01/04/google-font-selection</id>
+    <id>http://earlab.github.io/blog/2014/01/04/google-font-selection</id>
     <content type="html"><![CDATA[<p>Update Jan 4, 2014 (7:46 PM): Consider Open Sans 400, 300, 700.  See default font of Ghost </p>
 
 <p>Selection of open fonts from google</p>
@@ -557,9 +557,9 @@ font-family: 'Quicksand', sans-serif;
   
   <entry>
     <title type="html"><![CDATA[Logo Style Font]]></title>
-    <link href="http://yoursite.com/blog/2014/01/04/logo-style-font/"/>
+    <link href="http://earlab.github.io/blog/2014/01/04/logo-style-font/"/>
     <updated>2014-01-04T01:45:55+01:00</updated>
-    <id>http://yoursite.com/blog/2014/01/04/logo-style-font</id>
+    <id>http://earlab.github.io/blog/2014/01/04/logo-style-font</id>
     <content type="html"><![CDATA[<p>Demo of custom font through span + class</p>
 <!--more-->
 <p>from: svbtle.com / see also my clone of the style of that site</p>
@@ -570,9 +570,9 @@ class &#8220;logotype&#8221;</p>
   
   <entry>
     <title type="html"><![CDATA[Provide File-relative Paths]]></title>
-    <link href="http://yoursite.com/blog/2014/01/03/relative-paths/"/>
+    <link href="http://earlab.github.io/blog/2014/01/03/relative-paths/"/>
     <updated>2014-01-03T23:19:27+01:00</updated>
-    <id>http://yoursite.com/blog/2014/01/03/relative-paths</id>
+    <id>http://earlab.github.io/blog/2014/01/03/relative-paths</id>
     <content type="html"><![CDATA[<p>From: <a href="http://stackoverflow.com/questions/7985081/how-to-deploy-a-jekyll-site-locally-with-css-js-and-background-images-included">stackoverflow</a>.</p>
 
 <!--more-->
