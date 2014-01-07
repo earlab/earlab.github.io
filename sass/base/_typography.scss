@@ -1,12 +1,13 @@
 $blockquote: $type-border !default;
-$sans: "Lato", "Helvetica Neue", Arial, sans-serif !default;
+$sans: "Questrial", "Lato", "Helvetica Neue", Arial, sans-serif !default;
 //$serif: "proxima-nova" "PT Serif", Georgia, Times, "Times New Roman", serif !default;
-$serif: "Lato", Georgia, Times, "Times New Roman", serif !default;
+$serif: "Questrial", "Lato", Georgia, Times, "Times New Roman", serif !default;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
 //$heading-font-family: "proxima-nova" "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
-$heading-font-family: "Lato", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
+$heading-font-family: "Questrial", "Lato", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
 $header-title-font-family: $heading-font-family !default;
 $header-subtitle-font-family: $heading-font-family !default;
+$bold-family: "Lato", Georgia, Times, "Times New Roman", serif !default;
 
 // Fonts
 .heading {
@@ -89,9 +90,15 @@ ol { list-style-type: decimal;
 ul, ol { &, ul, ol { margin-left: 1.3em; }}
 ul, ol { ul, ol { margin-bottom: 0em; }}
 
-strong { font-weight: bold; }
+strong {
+    font-weight: bold; 
+    font-family: $bold-family; 
+}
 
-em { font-style: italic; }
+em {
+    font-style: italic; 
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+}
 
 sup, sub { font-size: 0.75em; position: relative;  display: inline-block; padding: 0 .2em; line-height: .8em;}
 sup { top: -.5em; }
@@ -106,13 +113,22 @@ q { font-style: italic;
 
 em, dfn { font-style: italic; }
 
-strong, dfn { font-weight: bold; }
+strong, dfn { font-weight: bold; font-family: $bold-family; }
 
 del, s { text-decoration: line-through; }
 
 abbr, acronym { border-bottom: 1px dotted; cursor: help; }
 
 pre, code, tt { @extend .mono; }
+
+
+/* Better styles for embedding GitHub Gists */
+/* From: https://gist.github.com/jnrbsn/578379 */
+.gist{font-size:13px;line-height:18px;margin-bottom:20px;width:100%}
+.gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}
+.gist-meta{font-family:Helvetica,Arial,sans-serif;font-size:13px !important}
+.gist-meta a{color:#26a !important;text-decoration:none}
+.gist-meta a:hover{color:#0e4071 !important}
 
 hr { margin-bottom: 0.2em; }
 
