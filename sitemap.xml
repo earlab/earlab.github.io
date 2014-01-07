@@ -1,75 +1,75 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://earlab.github.io/blog/2014/01/03/relative-paths/</loc>
+        <loc>http://yoursite.com/blog/2014/01/03/relative-paths/</loc>
         <lastmod>2014-01-04T13:09:59+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/2014/01/04/logo-style-font/</loc>
+        <loc>http://yoursite.com/blog/2014/01/04/logo-style-font/</loc>
         <lastmod>2014-01-04T13:09:37+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/2014/01/04/google-font-selection/</loc>
+        <loc>http://yoursite.com/blog/2014/01/04/google-font-selection/</loc>
         <lastmod>2014-01-06T21:11:59+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/2014/01/04/posting-excerpts/</loc>
+        <loc>http://yoursite.com/blog/2014/01/04/posting-excerpts/</loc>
         <lastmod>2014-01-04T13:19:19+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/2014/01/04/installing-site-on-github/</loc>
+        <loc>http://yoursite.com/blog/2014/01/04/installing-site-on-github/</loc>
         <lastmod>2014-01-04T21:38:21+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/2014/01/04/checking-rake-deploy-on-github/</loc>
-        <lastmod>2014-01-04T14:47:38+01:00</lastmod>
+        <loc>http://yoursite.com/blog/2014/01/04/checking-rake-deploy-on-github/</loc>
+        <lastmod>2014-01-07T07:04:17+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/2014/01/04/using-gists/</loc>
+        <loc>http://yoursite.com/blog/2014/01/04/using-gists/</loc>
         <lastmod>2014-01-04T23:03:41+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/2014/01/04/wrong-site-name-persists/</loc>
+        <loc>http://yoursite.com/blog/2014/01/04/wrong-site-name-persists/</loc>
         <lastmod>2014-01-06T22:08:48+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/2014/01/04/categories/</loc>
+        <loc>http://yoursite.com/blog/2014/01/04/categories/</loc>
         <lastmod>2014-01-04T20:33:00+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/2014/01/06/vicky-in-paris/</loc>
+        <loc>http://yoursite.com/blog/2014/01/06/vicky-in-paris/</loc>
         <lastmod>2014-01-06T18:32:07+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/archives/</loc>
-        <lastmod>2014-01-06T22:08:48+01:00</lastmod>
+        <loc>http://yoursite.com/blog/archives/</loc>
+        <lastmod>2014-01-07T07:04:17+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/archives/index2.html</loc>
+        <loc>http://yoursite.com/blog/archives/index2.html</loc>
         <lastmod>2014-01-03T18:45:31+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/blog/</loc>
-        <lastmod>2014-01-06T22:08:48+01:00</lastmod>
+        <loc>http://yoursite.com/blog/</loc>
+        <lastmod>2014-01-07T07:04:17+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/</loc>
-        <lastmod>2014-01-06T22:08:48+01:00</lastmod>
+        <loc>http://yoursite.com/</loc>
+        <lastmod>2014-01-07T07:04:17+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/pages.html</loc>
+        <loc>http://yoursite.com/pages.html</loc>
         <lastmod>2014-01-03T19:49:36+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/robots.txt</loc>
+        <loc>http://yoursite.com/robots.txt</loc>
         <lastmod>2014-01-03T15:39:20+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/subfolder1/</loc>
-        <lastmod>2014-01-06T22:08:48+01:00</lastmod>
+        <loc>http://yoursite.com/subfolder1/</loc>
+        <lastmod>2014-01-07T07:04:17+01:00</lastmod>
     </url>
     <url>
-        <loc>http://earlab.github.io/subfolder1/subsubfolder1/</loc>
-        <lastmod>2014-01-06T22:08:48+01:00</lastmod>
+        <loc>http://yoursite.com/subfolder1/subsubfolder1/</loc>
+        <lastmod>2014-01-07T07:04:17+01:00</lastmod>
     </url>
 </urlset>
