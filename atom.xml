@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-17T00:40:15+02:00</updated>
+  <updated>2014-01-21T17:27:39+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Showing Jekyll to Tania]]></title>
+    <link href="http://earlab.github.io/blog/2014/01/21/showing-jekyll-to-tania/"/>
+    <updated>2014-01-21T17:26:36+02:00</updated>
+    <id>http://earlab.github.io/blog/2014/01/21/showing-jekyll-to-tania</id>
+    <content type="html"><![CDATA[<p>At the video studio of AVARTS/Ionio.  Project for research and PhD websites.  Starting today &hellip; (!?).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[That Templating Business]]></title>
+    <link href="http://earlab.github.io/blog/2014/01/17/that-templating-business/"/>
+    <updated>2014-01-17T10:01:06+02:00</updated>
+    <id>http://earlab.github.io/blog/2014/01/17/that-templating-business</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Vicky in Paris]]></title>
@@ -533,11 +551,11 @@ from websites on fonts. </p>
 http://graphicdesign.stackexchange.com/questions/16036/what-are-google-webfonts-or-typekit-alternatives-to-avenir-next-pro. </p>
 <p>To consider:</p>
 <ul>
-  <li>Museo Sans</li>
-  <li>Montserrat</li>
-  <li>Muli</li>
-  <li>Avenir</li>
-  <li>Nunito</li>
+  <li>Museo Sans (not free)</li>
+  <li>Montserrat (possibly better alternative to Questrial: Softer)</li>
+  <li>Muli </li>
+  <li>Avenir (not free)</li>
+  <li>Nunito (similar to Montserrat) </li>
 </ul>
 
 
