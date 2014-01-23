@@ -4,7 +4,7 @@
   <title><![CDATA[Earlab]]></title>
   <link href="http://earlab.github.io/atom.xml" rel="self"/>
   <link href="http://earlab.github.io/"/>
-  <updated>2014-01-23T10:59:46+02:00</updated>
+  <updated>2014-01-23T11:02:14+02:00</updated>
   <id>http://earlab.github.io/</id>
   <author>
     <name><![CDATA[Ioannis Zannos]]></name>
@@ -18,12 +18,17 @@
     <link href="http://earlab.github.io/blog/2014/01/21/showing-jekyll-to-tania/"/>
     <updated>2014-01-21T17:26:36+02:00</updated>
     <id>http://earlab.github.io/blog/2014/01/21/showing-jekyll-to-tania</id>
-    <content type="html"><![CDATA[<p><a href="http://developmentseed.org/">http://developmentseed.org/</a>
-<a href="http://www.awwwards.com/20-best-websites-with-parallax-scrolling-of-2013.html">http://www.awwwards.com/20-best-websites-with-parallax-scrolling-of-2013.html</a>
-<a href="http://www.puma.com/mobium/">http://www.puma.com/mobium/</a>
-<a href="http://boy-coy.com/#home">http://boy-coy.com/#home</a>
-<a href="http://mythoughtsareyours.yolk.cc/">http://mythoughtsareyours.yolk.cc/</a>
-<a href="http://henrik.nyh.se/">http://henrik.nyh.se/</a></p>
+    <content type="html"><![CDATA[<p>Some websites visited:</p>
+
+<ul>
+<li><a href="http://developmentseed.org/">http://developmentseed.org/</a></li>
+<li><a href="http://www.awwwards.com/20-best-websites-with-parallax-scrolling-of-2013.html">http://www.awwwards.com/20-best-websites-with-parallax-scrolling-of-2013.html</a></li>
+<li><a href="http://www.puma.com/mobium/">http://www.puma.com/mobium/</a></li>
+<li><a href="http://boy-coy.com/#home">http://boy-coy.com/#home</a></li>
+<li><a href="http://mythoughtsareyours.yolk.cc/">http://mythoughtsareyours.yolk.cc/</a></li>
+<li><a href="http://henrik.nyh.se/">http://henrik.nyh.se/</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
